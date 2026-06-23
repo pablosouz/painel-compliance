@@ -16,7 +16,7 @@ import {
 const SEARCH_KEYWORDS = `(CPI OR indiciado OR acusado OR "Polícia Federal" OR "Ministério Público" OR judiciário OR "bloqueio de bens" OR "ação penal" OR "processo penal" OR condenado OR violações OR multas OR "crime ambiental" OR cartel OR "processo administrativo" OR "lavagem de dinheiro" OR corrupção)`;
 
 async function analyzeEntityWithN8N(entityName) {
-  const webhookUrl = "https://ehygy-187-121-143-114.run.pinggy-free.link/webhook/background-check";
+  const webhookUrl = "https://qeavl-187-121-143-114.run.pinggy-free.link/webhook/background-check";
   
   try {
     const response = await fetch(webhookUrl, {
