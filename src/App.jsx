@@ -17,6 +17,7 @@ const SEARCH_KEYWORDS = `(CPI OR indiciado OR acusado OR "Polícia Federal" OR "
 
 async function analyzeEntityWithN8N(entityName) {
   const webhookUrl = "https://n8n-rg8l.onrender.com/webhook/background-check";
+  // Certifique-se de que o finalzinho bate com o "Path" do nó Webhook
   
   try {
     const response = await fetch(webhookUrl, {
