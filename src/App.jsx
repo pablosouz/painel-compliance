@@ -15,6 +15,9 @@ import {
 
 const SEARCH_KEYWORDS = `(CPI OR indiciado OR acusado OR "Polícia Federal" OR "Ministério Público" OR judiciário OR "bloqueio de bens" OR "ação penal" OR "processo penal" OR condenado OR violações OR multas OR "crime ambiental" OR cartel OR "processo administrativo" OR "lavagem de dinheiro" OR corrupção)`;
 
+// Função auxiliar para criar a pausa (delay) no JavaScript
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
 async function analyzeEntityWithN8N(entityName) {
   const webhookUrl = "https://n8n-rg8l.onrender.com/webhook/background-check";
   // Certifique-se de que o finalzinho bate com o "Path" do nó Webhook
@@ -151,6 +154,12 @@ export default function BackgroundCheckApp() {
       currentEntities[i].result = result;
       setEntities([...currentEntities]);
       setScanProgress(Math.round(((i + 1) / currentEntities.length) * 100));
+
+      // Dá um "fôlego" de 5 segundos para o servidor n8n (Render gratuito) processar a próxima requisição,
+      // a menos que seja a última entidade da lista.
+      if (i < currentEntities.length - 1) {
+        await delay(5000); 
+      }
     }
 
     setIsScanning(false);
@@ -188,7 +197,7 @@ export default function BackgroundCheckApp() {
               </button>
               <button 
                 onClick={handlePrint}
-                className="flex items-center gap-2 text-sm bg-blue-600 hover:bg-blue-500 px-5 py-2.5 rounded-md font-semibold transition-colors shadow-sm"
+                className="flex items-center gap-2 text-sm bg-blue-600 hover:bg-blue-50 px-5 py-2.5 rounded-md font-semibold transition-colors shadow-sm"
               >
                 <Download className="w-4 h-4" /> Exportar / Imprimir
               </button>
