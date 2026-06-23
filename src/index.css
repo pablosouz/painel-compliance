@@ -1,14 +1,1 @@
-/* src/index.css - CSS Tradicional */
-body { font-family: sans-serif; background-color: #f8fafc; color: #1e293b; margin: 0; padding: 0; }
-.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-.card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin-top: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-h1 { color: #0f172a; font-size: 24px; font-weight: bold; }
-input, textarea { width: 100%; padding: 12px; margin-top: 8px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; }
-button { background: #0f172a; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; margin-top: 16px; font-weight: bold; }
-button:hover { background: #1e293b; }
-.progress-container { text-align: center; padding: 40px; }
-.status-item { padding: 10px; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; }
-.memo-header { border-bottom: 2px solid #0f172a; padding-bottom: 20px; margin-bottom: 20px; }
-.result-card { border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; margin-bottom: 16px; }
-.risk-alert { background: #fee2e2; color: #991b1b; padding: 12px; border-radius: 6px; }
-.clean-status { background: #d1fae5; color: #065f46; padding: 12px; border-radius: 6px; }
+@import "tailwindcss";
