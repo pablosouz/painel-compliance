@@ -52,7 +52,7 @@ export default function BackgroundCheckApp() {
   
   const [companyName, setCompanyName] = useState('');
   const [partnersInput, setPartnersInput] = useState('');
-  const [preparerName, setPreparerName] = useState('Pablo');
+  const [preparerName, setPreparerName] = useState('');
 
   const [entities, setEntities] = useState([]);
   const [scanProgress, setScanProgress] = useState(0);
@@ -223,7 +223,7 @@ export default function BackgroundCheckApp() {
                   value={preparerName}
                   onChange={(e) => setPreparerName(e.target.value)}
                   className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                  placeholder="Ex: Luana Costa"
+                  placeholder="Ex: Ricardo Araujo"
                 />
               </div>
 
@@ -236,7 +236,7 @@ export default function BackgroundCheckApp() {
                     value={companyName}
                     onChange={(e) => setCompanyName(e.target.value)}
                     className="w-full pl-10 p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                    placeholder="Ex: ALLOY METALS MINERACAO LTDA"
+                    placeholder="Ex: GRANT THORTON"
                   />
                 </div>
               </div>
